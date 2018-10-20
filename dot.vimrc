@@ -2,7 +2,7 @@
 "
 " Overlaps partially with vim-sensible
 "
-set number	" Show line numbers
+" set number	" Show line numbers
 set linebreak	" Break lines at word (requires Wrap lines)
 set showbreak=+++	" Wrap-broken line prefix
 set textwidth=100	" Line wrap (number of cols)
@@ -30,7 +30,7 @@ set backspace=indent,eol,start	" Backspace behaviour
 
 " BEGIN misc
 "
-set number
+"set number
 set undofile
 
 " remapping arrow keys to make sure we're only using hjkl
@@ -65,6 +65,13 @@ Plug 'rafi/awesome-vim-colorschemes'
 
 "Plug 'roman/golden-ratio'
 Plug 'ervandew/supertab'
+
+Plug 'jamessan/vim-gnupg' 
+" Armor files
+let g:GPGPreferArmor=1
+" Set the default option
+let g:GPGDefaultRecipients=["andreas.wilm@gmail.com"]
+
 
 Plug 'zah/nim.vim'
 " Plug 'pangloss/vim-javascript'
