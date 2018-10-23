@@ -65,8 +65,10 @@ Plug 'rafi/awesome-vim-colorschemes'
 
 "Plug 'roman/golden-ratio'
 Plug 'ervandew/supertab'
+"Plug 'Valloric/YouCompleteMe'
 
-Plug 'jamessan/vim-gnupg' 
+
+Plug 'jamessan/vim-gnupg'
 " Armor files
 let g:GPGPreferArmor=1
 " Set the default option
@@ -78,7 +80,28 @@ Plug 'zah/nim.vim'
 
 Plug 'tpope/vim-sensible'
 Plug 'bronson/vim-trailing-whitespace'
-Plug 'https://github.com/vim-airline/vim-airline'
+
+Plug 'tomtom/tcomment_vim'
+" in visual mode: gc : Toggle comments
+" gcc : Toggle comment for the current line
+" https://github.com/tomtom/tcomment_vim
+
+" http://ctrlpvim.github.io/ctrlp.vim/
+Plug 'ctrlpvim/ctrlp.vim'
+map ; :CtrlPMixed<CR>
+" switch to fzf instead?
+
+
+" Plug 'nathanaelkane/vim-indent-guides'
+" http://sherifsoliman.com/2016/05/30/favorite-vim-plugins/
+" let g:indent_guides_guide_size = 1
+" let g:indent_guides_color_change_percent = 3
+" let g:indent_guides_enable_on_vim_startup = 1
+" set background=dark
+
+" Plug 'https://github.com/vim-airline/vim-airline'
+Plug 'itchyny/lightline.vim'
+
 " Plug 'https://github.com/kien/rainbow_parentheses.vim'
 " Plug 'https://github.com/mtth/scratch.vim'
 " make hlsearch more useful, e.g. disable highlight after done
@@ -126,6 +149,8 @@ endif
 " gruvbox
 "let g:gruvbox_italics= 1
 "colorscheme gruvbox
+
+" looks interesting: badwolf https://github.com/sjl/badwolf
 
 colorscheme afterglow
 "colorscheme materialbox
