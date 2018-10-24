@@ -74,6 +74,9 @@ let g:GPGPreferArmor=1
 " Set the default option
 let g:GPGDefaultRecipients=["andreas.wilm@gmail.com"]
 
+" This plugin overwrites CTRL-f, CTRL-b, CTRL-d, CTRL-u, zt, zz, and zb with code that scrolls the
+" lines fluidly to help the user know how far they are scrolling in the file.
+Plug 'cskeeters/vim-smooth-scroll'
 
 Plug 'zah/nim.vim'
 " Plug 'pangloss/vim-javascript'
