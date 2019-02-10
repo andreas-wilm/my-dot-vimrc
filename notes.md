@@ -35,6 +35,25 @@ or
 
 Verb, Modifier, Noun
 
+## text objects
+
+From http://codyveal.com/posts/vim-killer-features-part-1-text-objects/
+
+All text objects come in two forms, normal and inner (prefixed by a and i, respectively). As a
+general rule, normal text objects include the characters that delimit the object, while the inner
+form will leave the delimiters intact.
+
+- Word by punctuation: aw/iw
+- Word by whitespace: aW/iW (see :help WORD)
+- Sentence: as/is
+- Paragraph: ap/ip
+- Quotes: a“/i“
+- Parentheses: a)/i)
+- Brackets: a]/i]
+- Braces: a}/i}
+- Angle Brackets: a>/i>
+- Tags (e.g. <html>inner</html>): at/it
+
 ## change/insert
 
 - `i` insert before cursor
@@ -45,6 +64,9 @@ Verb, Modifier, Noun
 - `C` Delete the line from where you’re at, and enter insert mode
 - `dd` delete line and stay in normal mode
 - `S` Delete the entire line you’re on, and enter insert mode
+
+- `s` substitute and changed to insert mode
+- `r` replace character and stay in command mode
 
 ## copying 
 
@@ -65,7 +87,7 @@ Verb, Modifier, Noun
 - `G` move to the end of the file.
 - `gg` move to the beginning of the file.
 - `.` move to the last edit.
-- `%` go to matching parenthesis
+- `%` go to matching parenthesis (any)
 - `(|)` move backward/forward one sentence
 - `{|}` move backward/forward one paragraph
 - `:no` move to line number `no`
@@ -125,10 +147,12 @@ prefacing a movement command with a number will execute that movement multiple t
 - :%s/text/replacement text/gc search through the entire document and confirm before replacing text.
 - as above but without %: only current line
 
+## visual 
+
 - v for visual mode on characters 
 - V for visual mode on lines
-- vip visually select paragraph (ip is a so called object)
-
+- `vip` visually select paragraph (ip is a so called object)
+- ctrl-v for block selection. allows edit with I, which are made on all lines after hitting Esc
 
 ## searching
 
@@ -145,6 +169,7 @@ everything from your cursor up to the next colon, but not delete the colon. You 
 - n for next
 - N for previous
 - `*` search for instances of word under cursor
+- `#` same but backwards
 
 
 # copy and paste
@@ -167,6 +192,8 @@ pasted with p or P back into the document
 # misc
 
 - ~ toggle case
+- u/U lower/upper case
+
 - :set spell  to enable spelling mode
 - :h quickref  for quickref
 - :>> indent current line
