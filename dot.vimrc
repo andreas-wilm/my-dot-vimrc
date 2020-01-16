@@ -34,6 +34,14 @@ set number relativenumber
 set undofile
 
 " remapping arrow keys to make sure we're only using hjkl
+" this actually sucks for quick movements in edit mode
+" but the alternative there is to use insert-normal mode with ctrl-o
+" examples:
+" jump to EOL: C-o $
+" jump to BOL: C-o 0i
+" jump to anchor: C-o T anchor
+" delete to anchor: C-o d T anchor
+"
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
@@ -126,6 +134,13 @@ Plug 'godlygeek/tabular'
 let g:ale_completion_enabled = 1
 Plug 'w0rp/ale'
 
+
+" too annoying and somehow interferes
+" with arrow keys (because of the remap above?)
+" Plug 'takac/vim-hardtime'
+" let g:hardtime_default_on = 1
+" let g:hardtime_showmsg = 1
+" let g:hardtime_maxcount = 2
 
 "Plug 'vim-syntastic/syntastic'
 "set statusline+=%#warningmsg#

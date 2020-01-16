@@ -2,20 +2,22 @@
 
 ## behaviours
 
-- use `hjkl`
-- consider going cold turkey:
+use `hjkl`
+
+consider going cold turkey:
   - `nnoremap <up> <nop>`
   - `nnoremap <down> <nop>`
   - `nnoremap <left> <nop>`
   - `nnoremap <right> <nop>`
 
+see also plugin hardtime
 
 ## splits
 
 - `:vsp [file]`  vertical split (on new file)
 - `:sp [file]`  horizontal split (on new file)
 - `:10sp [file]`  open split with predefined height
-- `:q`  quit current split 
+- `:q` quit current split 
 - `:only`  closes everything apart from current window
 - `ctrl-w jklh`  move between splits
 - `ctrl-w w`  cycle through splits
@@ -81,8 +83,8 @@ form will leave the delimiters intact.
 - `l` moves the cursor one character to the right.
 - `0|^` moves the cursor to the beginning of the line.
 - `$` moves the cursor to the end of the line.
-- `w` move forward one word.
-- `e` move to end of word
+- `w` move forward one word (consider ea for edit)
+- `e` move to end of word (use a for following edits)
 - `b` move backward one word.
 - `G` move to the end of the file.
 - `gg` move to the beginning of the file.
@@ -92,8 +94,10 @@ form will leave the delimiters intact.
 - `{|}` move backward/forward one paragraph
 - `:no` move to line number `no`
 - `ctrl-i`: jump to previous navigation
-- `ctrl-o`: jump back to where you were 
+- `ctrl-o`: jump back to where you were
 - `H,M,L`: move cursor within screen (high, medium, low)
+- `ctrl-f`: half a page down
+- `ctrl-d`: half a page up
 
 You can move a line, or a block of lines, with the :m command. Examples:
 
@@ -147,12 +151,22 @@ prefacing a movement command with a number will execute that movement multiple t
 - :%s/text/replacement text/gc search through the entire document and confirm before replacing text.
 - as above but without %: only current line
 
-## visual 
+## special commands in insert mode
 
-- v for visual mode on characters 
+- ctrl-d          Delete one shiftwidth of indent
+- ctrl-t          Insert one shiftwidth of indent at the start of the current line
+- ctrl-u          Delete all entered characters before the cursor
+- ctrl-w          Delete the word before the cursor
+
+see also `:help ins-special-keys`
+
+## visual
+
+- v for visual mode on characters
 - V for visual mode on lines
 - `vip` visually select paragraph (ip is a so called object)
-- ctrl-v for block selection. allows edit with I, which are made on all lines after hitting Esc
+- ctrl-v for block selection. allows edit with I, which are made on all multiple lines after hitting Esc
+  (needs prefix ctrl-q on windows, i.e ctrl-q + ctrl-v + select + I + edit + esc
 
 ## searching
 
