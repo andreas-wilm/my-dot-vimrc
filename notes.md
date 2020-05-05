@@ -151,6 +151,8 @@ prefacing a movement command with a number will execute that movement multiple t
 - :%s/text/replacement text/gc search through the entire document and confirm before replacing text.
 - as above but without %: only current line
 
+- ctrl-l: vim-sensible binds noh to c-l so use that to disable highlighting after search
+
 ## special commands in insert mode
 
 - ctrl-d          Delete one shiftwidth of indent
@@ -241,7 +243,10 @@ http://vim.wikia.com/wiki/Using_tab_pages
 - `:tabp` or `gT`: prev tab
 - `:tabedit`: open file in new tab
 - `:tabclose`
- 
+- `gt`: go to next tab
+- `gT`: go to previous tab
+- `{i}gt`: go to tab in position i
+
 # registers
 
 - help :registers

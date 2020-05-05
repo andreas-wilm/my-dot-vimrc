@@ -12,17 +12,17 @@ set visualbell	" Use visual bell (no beeping)
 set hlsearch	" Highlight all search results
 set smartcase	" Enable smart-case search
 set ignorecase	" Always case-insensitive
-set incsearch	" Searches for strings incrementally
+" vim-sensible set incsearch	" Searches for strings incrementally
 
-set autoindent	" Auto-indent new lines
+" vim-sensible set autoindent	" Auto-indent new lines
 set shiftwidth=4	" Number of auto-indent spaces
 set smartindent	" Enable smart-indent
-set smarttab	" Enable smart-tabs
+" vim-sensible set smarttab	" Enable smart-tabs
 set softtabstop=4	" Number of spaces per Tab
 
-set ruler	" Show row and column ruler information
+" vim-sensible set ruler	" Show row and column ruler information
 set undolevels=1000	" Number of undo levels
-set backspace=indent,eol,start	" Backspace behaviour
+" vim-sensible set backspace=indent,eol,start	" Backspace behaviour
 "
 " END https://vimconfig.com/
 
@@ -77,8 +77,9 @@ Plug 'rafi/awesome-vim-colorschemes'
 "Plug 'vim-scripts/darktango.vim'
 
 "Plug 'roman/golden-ratio'
+"
 Plug 'ervandew/supertab'
-"Plug 'Valloric/YouCompleteMe'
+
 
 
 Plug 'jamessan/vim-gnupg'
@@ -152,6 +153,13 @@ Plug 'w0rp/ale'
 "let g:syntastic_check_on_wq = 0
 
 
+" autocomplet
+"
+"Plug 'Valloric/YouCompleteMe'
+" or
+" https://github.com/neoclide/coc.nvim
+" https://github.com/Shougo/deoplete.nvim
+" https://github.com/ajh17/VimCompletesMe
 
 "" deoplete
 "if has('nvim')
@@ -167,7 +175,21 @@ Plug 'w0rp/ale'
 " Plug 'https://github.com/kien/rainbow_parentheses.vim'
 " Plug 'https://github.com/mtth/scratch.vim'
 " make hlsearch more useful, e.g. disable highlight after done
-Plug 'romainl/vim-cool'
+" had trouble with this adding tophl after some searcher: Plug 'romainl/vim-cool'
+" now using vim-sensible's nohl binding to ctrl-l
+"
+
+" https://github.com/terryma/vim-multiple-cursors
+" Really interesting, but never got it to work on words with dashes, e.g. vim-sensible. Only seems
+" to work on "vim" there
+" normal mode / visual mode
+" start: <C-n> start multicursor and add a virtual cursor + selection on the match
+"   next: <C-n> add a new virtual cursor + selection on the next match
+"   skip: <C-x> skip the next match
+"   prev: <C-p> remove current virtual cursor + selection and go back on previous match
+" select all: <A-n> start multicursor and directly select all matches
+" Plug 'terryma/vim-multiple-cursors'
+
 call plug#end()
 
 
